@@ -1,1 +1,14 @@
-welcome, {{user}}
+{% extends 'base/base.html' %}
+
+{% block title%}
+register | page
+{% endblock title%}
+
+{% block links%}
+{% endblock links %}
+
+
+{% block body %}
+    <h1>Welcome, {{request.user.username}}</h1>
+    <a href="{% url 'logout_view' %}">Logout</a>
+{% endblock body %}
