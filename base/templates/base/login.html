@@ -1,0 +1,52 @@
+<!-- This is loading part -->
+{% extends 'base/base.html'%}
+{% load static %}
+
+<!-- This is title part -->
+{% block title%}
+login | page
+{% endblock title%}
+
+<!-- This is links part -->
+{% block links%}
+<link rel="stylesheet" href="{% static 'base/css/login.css' %}">
+{% endblock links%}
+
+
+<!-- This is body part -->
+{% block body%}
+    <main>
+        <div class="error" style="color: wheat;font-size: 30px;">
+            <div class="error">
+                {% for message in messages %}
+                <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="form">
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="upper">
+                <div class="title">
+                    <h1>Login</h1>
+                </div><br>
+                <div class="username">
+                    <input type="text" name="username" placeholder="Username">
+                </div> 
+                <br>
+                <div class="password">
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                <br>
+            </div>
+                <div class="login-btn">
+                    <button type="submit">Log In</button>
+                </div>
+                <div class="not-register">
+                    <a href="{% url 'register_view' %}">Not register yes?</a>
+                </div>
+                <br>
+            </form>
+        </div>
+    </main>
+{% endblock body%}

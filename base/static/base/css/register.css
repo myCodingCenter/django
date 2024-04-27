@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(18, 14, 36);
+}
+.form{
+    height: 100vh;
+    /* border: 2px solid blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title{
+    color: darkblue;
+    padding-left: 20px;
+    font-family: sans-serif;
+}
+form{
+    background-color: whitesmoke;
+    width: 30vw;
+    padding: 20px 20px 0px 20px;
+}
+form .input input{
+    width: 100%;
+    height: 3rem;
+    padding: 10px;
+    font-size: 20px;
+}
+.role{
+    padding: 20px 20px 0px 20px;
+    font-size: 20px;
+}
+.register-btn{
+    padding-bottom: 20px;
+}
+.register-btn button{
+    background-color: rgb(140, 221, 19);
+    width: 100%;
+    height: 3rem;
+    font-size: 20px;
+    color: rgb(83, 110, 134);
+}
+.login{
+    display: block;
+    text-align: center;
+}
+.login a{
+    font-size: 20px;
+    text-align: center;
+}

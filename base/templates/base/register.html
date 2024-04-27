@@ -1,0 +1,64 @@
+<!-- This is loading part -->
+{% extends 'base/base.html'%}
+{% load static %}
+
+<!-- This is title part -->
+{% block title%}
+register | page
+{% endblock title%}
+
+<!-- This is links part -->
+{% block links%}
+<link rel="stylesheet" href="{% static 'base/css/register.css' %}">
+{% endblock links%}
+
+{% block body%}
+    <main>
+        <div class="error" style="color: wheat;font-size: 30px;">
+            <div class="error">
+                {% for message in messages %}
+                <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="form">
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="account-info">
+                    <div class="title">
+                        <h2>Account Info</h2>
+                    </div><br>
+                    <div class="username input">
+                        <input type="text" name="username" placeholder="username">
+                    </div>
+                    <div class="password input">
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <div class="confirm_password input">
+                        <input type="password" name="confirm_password" placeholder="Confirm Password">
+                    </div>
+                    <div class="role">
+                        <input type="radio" name="role"> <span class="radio">Student</span>
+                        <input type="radio" name="role"> <span class="radio">Teacher</span>
+                    </div>
+                </div>
+                <br>
+                <div class="personal-info">
+                    <div class="title">
+                        <h2>Personal Info</h2>
+                    </div><br>
+                    <div class="firtname input">
+                        <input type="text" name="firstname" placeholder="First Name">
+                    </div>
+                    <div class="lastname input">
+                        <input type="text" name="Last Name" placeholder="Last Name">
+                    </div>
+                </div><br>
+                <div class="register-btn">
+                    <button>Register</button><br>
+                    <a href="{% url 'login_view' %}" class="login">Already have a account. Login</a>
+                </div>
+            </form>
+        </div>
+    </main>
+{% endblock body%}
