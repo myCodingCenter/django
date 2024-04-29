@@ -13,12 +13,12 @@ register | page
 
 {% block body %}
 <nav>
-    <div class="left">
+    <!-- <div class="left"> -->
         <div class="classes">
             <a href="">Classes</a>
         </div>
-    </div>
-    <div class="right">
+    <!-- </div> -->
+    <!-- <div class="right"> -->
     <div class="search">
         <label for="search"><span>search</span></label>
         <input id="search" type="text">
@@ -26,7 +26,7 @@ register | page
     <div class="logout">
         <a href="{% url 'logout_view' %}">Log out</a>
     </div>
-</div>
+<!-- </div> -->
 </nav>
 <main>
     {% if request.user.first_name %}
