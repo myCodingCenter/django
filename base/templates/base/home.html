@@ -1,14 +1,42 @@
 {% extends 'base/base.html' %}
+{% load static %}
+
 
 {% block title%}
 register | page
 {% endblock title%}
 
 {% block links%}
+<link rel="stylesheet" href="{% static 'base/css/home.css' %}">
 {% endblock links %}
 
 
 {% block body %}
-    <h1>Welcome, {{request.user.username}}</h1>
-    <a href="{% url 'logout_view' %}">Logout</a>
+<nav>
+    <div class="left">
+        <div class="classes">
+            <a href="">Classes</a>
+        </div>
+    </div>
+    <div class="right">
+    <div class="search">
+        <label for="search"><span>search</span></label>
+        <input id="search" type="text">
+    </div>
+    <div class="logout">
+        <a href="{% url 'logout_view' %}">Log out</a>
+    </div>
+</div>
+</nav>
+<main>
+    {% if request.user.first_name %}
+    <strong> {{request.user.first_name | capfirst}}</strong>, Welcome to classroom
+    {% elif request.user.username %}
+    <strong> {{request.user.username | capfirst}}</strong>
+    {% else %}
+    <strong>Sorry, Username not found</strong>
+    {%endif%}
+    <!-- <h1>Welcome, {{request.user.username}}</h1> -->
+    <br>
+</main>
 {% endblock body %}

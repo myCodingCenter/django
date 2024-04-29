@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    /* border: 2px solid green; */
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    background-color: rgb(244, 250, 255);
+}
+nav .left{
+/* border: 2px solid red; */
+flex-grow: 1;
+text-align: center;
+
+}
+nav .right{
+    /* border: 2px solid #808080; */
+    /* margin-right: 50px; */
+    flex-grow:1;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.search {
+    /* border: 2px solid cyan; */
+    margin-right: 20px;
+}
+.search span{
+    padding-right: 8px;
+}
