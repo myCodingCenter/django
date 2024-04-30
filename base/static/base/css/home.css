@@ -2,21 +2,36 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: white;
+    font-family: sans-serif;
 }
 nav{
-    border: 2px solid green;
+    /* border: 2px solid rgb(107, 128, 160); */
     height: 10vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+    font-size: 24px;
+    background-color:rgb(45, 77, 45) ;
 }
-
-.search {
-    /* border: 2px solid cyan; */
-    /* margin-right: 20px; */
+nav div a{
+    text-decoration: none;
+    color:white ;
+}
+nav .appname a{
+    color: rgb(45, 184, 68);
+}
+.search input{
+    border-radius: 20px;
+    height: 1.8rem;
 }
 .search span{
     padding-right: 8px;
+}
+main{
+    background-color: rgb(11, 75, 11);
+    height: 100vh;
+    padding: 3rem 5rem 0 5rem;
 }
